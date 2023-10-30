@@ -37,7 +37,7 @@ class Apriori:
             self.threshold = threshold
 
         if transform_bool:
-            self._transform_bool
+            self._transform_bool()
 
     def _validate_df(self, df=None):
         """Valida existencia do DataFrame
