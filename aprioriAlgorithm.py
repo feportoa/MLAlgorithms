@@ -1,3 +1,15 @@
+"""Apriori
+
+Regra de Associacao
+Metodo de explorar relacoes entre itens em conjuntos de dados
+
+Calculo de Support:
+Medida que indica a proporcao de X em D (Database)
+Supp(X) = (#X in D)/(#D)
+
+Fazemos o suporte com 1 item de cada vez, depois com 2 itens, 3, 4, ate nao sobrar mais nada que ultrapasse o threshold
+"""
+
 import pandas as pd
 from mlxtend.frequent_patterns import apriori
 
@@ -12,6 +24,8 @@ dataset = [[1, 1, 1, 1, 1, 0],
            [7, 0, 1, 0, 0, 0],
            [8, 0, 0, 0, 1, 1],
            [9, 0, 0, 0, 1, 1]]
+
+# Supp(X) = 4/9
 
 # DataFrame
 dataFrame = pd.DataFrame(dataset, columns=colunas)
